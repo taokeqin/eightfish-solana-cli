@@ -1,0 +1,18 @@
+[package]
+name = "eightfish-solana-cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+async = ["anchor-client/async"]
+
+[dependencies]
+eightfish-solana = { path = "../eightfish-solana/programs/eightfish-solana" }
+anyhow = "1.0.32"
+clap = { version = "4.2.4", features = ["derive"] }
+shellexpand = "2.1.0"
+solana-sdk = ">=1.14, <1.17"
+tokio = { version = "1", features = ["full"] }
+anchor-client = { version = "0.28.0", features = ["async"] }
+anchor-lang = "0.28.0"
